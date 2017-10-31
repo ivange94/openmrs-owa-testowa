@@ -27,6 +27,11 @@ let homeModule = angular.module('home', [ uiRouter, 'openmrs-contrib-uicommons']
         url: '/create-patient',
         template: require('./patientCreatePage.html')
         })
+
+        $stateProvider.state('helloWorld', {
+            url: '/hello-world',
+            template: require('./components/hello-world/helloWorld.html')
+        })
     })
     .config(['$qProvider', function ($qProvider) {
       $qProvider.errorOnUnhandledRejections(false);
